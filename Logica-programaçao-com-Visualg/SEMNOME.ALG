@@ -1,25 +1,31 @@
 Algoritmo "semnome"
-// 
-//  
-// Descrição   : Aqui você descreve o que o programa faz! (função)
-// Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 06/01/2025
+
 Var
-Vet : vetor [0..9] de real
-i, Quant : inteiro
+  N,i, j, temp :inteiro
+  matQuadr : vetor[0..9, 0..9] de inteiro
 
 
 Inicio
-    escreva("Quantos numeros vove vai digitar? ")
-    leia(Quant)
-    para i de 0 ate Quant - 1 faca
-         escreva("Digite um numero: ")
-         leia(Vet[i])
-    fimpara
-    escreval("Numeros digitedaos:")
-    para i de 0 ate quant - 1 faca
+     escreva("Qual a ordem de matriz? ")
+     leia(N)
+     para i de 0 ate N-1 faca
+          para j de 0 ate N-1 faca
+               escreva("Elemento [",i,j,"]: ")
+               leia(matQuadr[i, j])
+          fimpara
+     fimpara
+     leia(N)
+     escreval("Maior elemento de cada linha:")
+     temp <- 0
+     para i de 1 ate N-1 faca
+          para j de 0 ate N-1 faca
+               se matQuadr[i, j] > temp entao
+                  temp <-matQuadr[i, j]
+                  escreval(temp)
+               fimse
 
-         escreval(Vet[i])
-    fimpara
+          fimpara
+     fimpara
+
 
 Fimalgoritmo
